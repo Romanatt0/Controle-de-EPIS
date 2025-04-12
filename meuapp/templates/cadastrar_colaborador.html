@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Security System - Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <div class="logo">
+                <span>S</span>
+            </div>
+            <ul>
+                <li><a href="#">Colaboradores</a>
+                    <ul class="sub-menu">
+                        <li><a href='{% url "colaborador" %}'>Listagem</a></li>
+                        <li><a href="#">Cadastrar</a></li>
+                        <li><a href="#">Editar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Equipamento</a></li>
+                <li><a href="#">Controle de EPIs</a></li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <header>
+                <h1>Security System</h1>
+            </header>
+
+            <div class="login-box">
+                <h2>Seja bem-vindo!</h2>
+                <p>Faça cadastro do colaborador aqui:</p>
+
+                <!-- Formulário Django com CSRF token -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="usuario">Nome:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                
+                    <label for="senha">CPF:</label>
+                    <input type="text" id="senha" name="senha" required>
+                
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

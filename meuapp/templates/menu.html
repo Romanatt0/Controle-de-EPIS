@@ -1,0 +1,32 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'menu.css'%}">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="topo">
+        <div class="logo">
+            <span>S</span>
+        </div>
+        <h1>Security System</h1>
+        
+        <div id="usuario">
+            <h1>Victor</h1>
+            <img src="meuapp\templates\imagens\585e4bcdcb11b227491c3396.png" alt="sem foto">
+        </div>
+    </header>
+
+    
+    <div class="container">  
+        <a href='{% url "cadastrar_colaborador" %}' class="botao">Colaboradores</a>
+        <a href="" class="botao botao2">EQUIPAMENTOS</a>
+        <a href="" class="botao">EMPRESTIMOS</a>
+    </div>
+
+</body>
+</html>
