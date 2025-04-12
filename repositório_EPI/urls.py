@@ -25,6 +25,5 @@ urlpatterns = [
     path('cadastrar/', include('meuapp.urls')),
     path('sucesso/', include('meuapp.urls')),
     path('cadastrar_equipamento/', include('meuapp.urls') ),
-
-    
+    path('equipamento/sucesso/', include('meuapp.urls')),
 ]

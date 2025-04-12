@@ -60,5 +60,11 @@ def cadastrar_equipamento(request):
             quantidade=quantidade
         )
 
-        return redirect('equipamento')  # ou qualquer outra view/listagem
+        return redirect('sucesso_equipamento')  # <- Aqui está a mudança
+
     return render(request, 'cadastrar_equipamento.html')
+
+def sucesso_equipamento(request):
+    return render(request, 'sucesso_equipamento.html')
+
+    

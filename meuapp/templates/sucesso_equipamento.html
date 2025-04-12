@@ -1,0 +1,43 @@
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipamento Cadastrado</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <span>S</span>
+            </div>
+            <ul>
+                <li><a href="#">Colaboradores</a></li>
+                <li><a href="#">Equipamento</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Listagem</a></li>
+                        <li><a href="{% url 'cadastrar_equipamento' %}">Cadastrar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Controle de EPIs</a></li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="main-content">
+            <header>
+                <h1>Security System</h1>
+            </header>
+
+            <div class="login-box">
+                <h2>Sucesso!</h2>
+                <p>O equipamento foi cadastrado com sucesso.</p>
+                <a href="{% url 'cadastrar_equipamento' %}">
+                    <button>Adicionar outro</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
