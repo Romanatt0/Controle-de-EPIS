@@ -16,12 +16,17 @@
             <ul>
                 <li><a href="#">Colaboradores</a>
                     <ul class="sub-menu">
-                        <li><a href='{% url "colaborador" %}'>Listagem</a></li>
+                        <li><a href="{% url 'colaborador' %}">Listagem</a></li>
                         <li><a href="#">Cadastrar</a></li>
                         <li><a href="#">Editar</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Equipamento</a></li>
+                <li><a href="#">Equipamento</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Listagem</a></li>
+                        <li><a href="{% url 'cadastrar_equipamento' %}">Cadastrar</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Controle de EPIs</a></li>
             </ul>
         </div>

@@ -2,6 +2,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Colaborador
+from .models import Equipamento
+
 
 
 # Create your views here.
@@ -14,6 +16,7 @@ def menu(request):
 
 def colaborador(request):
     return render(request, "colaborador.html")
+
 
 def cadastrar_colaborador(request):
     if request.method == 'POST':
@@ -39,4 +42,23 @@ def cadastrar_colaborador(request):
     return render(request, 'cadastrar_colaborador.html')
 
 def sucesso(request):
-    return render(request, 'sucesso.html')  # Uma página simples de suce
+    return render(request, 'sucesso.html')  # Uma página simples de sucesso
+
+def cadastrar_equipamento(request):
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        tipo = request.POST.get('tipo')
+        modelo = request.POST.get('modelo')
+        descricao = request.POST.get('descricao')
+        quantidade = request.POST.get('quantidade')
+
+        Equipamento.objects.create(
+            nome=nome,
+            tipo=tipo,
+            modelo=modelo,
+            descricao=descricao,
+            quantidade=quantidade
+        )
+
+        return redirect('equipamento')  # ou qualquer outra view/listagem
+    return render(request, 'cadastrar_equipamento.html')

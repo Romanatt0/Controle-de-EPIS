@@ -8,22 +8,27 @@
 <body>
 
   <!-- Barra Lateral -->
-  <div class="sidebar">s
+  <div class="sidebar">
     <div class="logo">
-      <span>S</span>
+        <span>S</span>
     </div>
     <ul>
-      <li><a href="{% url 'colaborador' %}">Colaboradores</a>
-        <ul class="sub-menu">
-          <li><a href="{% url 'colaborador' %}">Listagem</a></li>
-          <li><a href= "{% url 'cadastrar_colaborador' %}">Cadastrar</a></li>
-          <li><a href="#">Editar</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Equipamento</a></li>
-      <li><a href="#">Controle de EPIs</a></li>
+        <li><a href="#">Colaboradores</a>
+            <ul class="sub-menu">
+                <li><a href="{% url 'colaborador' %}">Listagem</a></li>
+                <li><a href="{% url 'cadastrar_colaborador' %}">Cadastrar</a></li>
+                <li><a href="#">Editar</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Equipamento</a>
+            <ul class="sub-menu">
+                <li><a href="#">Listagem</a></li>
+                <li><a href="{% url 'cadastrar_equipamento' %}">Cadastrar</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Controle de EPIs</a></li>
     </ul>
-  </div>
+</div>
 
   <!-- Conteúdo Principal -->
   <div class="main-content">
